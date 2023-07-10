@@ -38,6 +38,7 @@ android {
 	lintOptions {
 		disable 'InvalidPackage'
 	}
+	namespace "com.mjohnsullivan.flutterwear.wear"
 }
 
 dependencies {
