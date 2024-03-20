@@ -1,3 +1,8 @@
+# 1.2.0
+
+- First release of `wear_plus`. Replace any references to the `wear` plugin with `wear_plus` to switch.
+- `InheritedShape` is now private. This would be a breaking change if this wasn't the first release of a new plugin.
+
 # 1.1.0
 
 - Fix issue with non-windows builds breaking.
