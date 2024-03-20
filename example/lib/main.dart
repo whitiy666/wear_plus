@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: WatchShape(
-            builder: (BuildContext context, WearShape shape, Widget? child) {
+            builder: (context, shape, child) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
               );
             },
             child: AmbientMode(
-              builder: (BuildContext context, WearMode mode, Widget? child) {
+              builder: (context, mode, child) {
                 return Text(
                   'Mode: ${mode == WearMode.active ? 'Active' : 'Ambient'}',
                 );

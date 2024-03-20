@@ -2,11 +2,14 @@ import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter/services.dart'
     show MethodChannel, MethodCall, PlatformException;
 
+/// Provides access to Wearable features
 class Wear {
   static const MethodChannel _channel = MethodChannel('wear');
 
+  /// Get the [Wear] instance
   factory Wear() => instance;
 
+  /// Access to the singleton instance
   static final instance = Wear._();
 
   Wear._() {
@@ -32,17 +35,14 @@ class Wear {
         final details =
             AmbientDetails(args['burnInProtection']!, args['lowBitAmbient']!);
         _notifyAmbientCallbacks((callback) => callback.onEnterAmbient(details));
-        break;
       case 'onExitAmbient':
         _notifyAmbientCallbacks((callback) => callback.onExitAmbient());
-        break;
       case 'onUpdateAmbient':
         _notifyAmbientCallbacks((callback) => callback.onUpdateAmbient());
-        break;
       case 'onInvalidateAmbientOffload':
         _notifyAmbientCallbacks(
-            (callback) => callback.onInvalidateAmbientOffload());
-        break;
+          (callback) => callback.onInvalidateAmbientOffload(),
+        );
     }
   }
 
@@ -113,6 +113,7 @@ class Wear {
 
 /// Provides details of current ambient mode configuration.
 class AmbientDetails {
+  /// Constructor
   const AmbientDetails(this.burnInProtection, this.lowBitAmbient);
 
   /// Used to indicate whether burn-in protection is required.
