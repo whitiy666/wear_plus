@@ -33,8 +33,6 @@ If you are creating a standalone watch app, add the following to your manifest:
 
 ## Example
 
-Typically, all three of these widgets would be used near the root of your app's widget tree:
-
 ```dart
 class WatchScreen extends StatelessWidget {
   @override
@@ -51,17 +49,3 @@ class WatchScreen extends StatelessWidget {
   }
 }
 ```
-
-# Old Requirements
-
-**You DO NOT need to modify these files anymore:**
-
-You can remove all the old wearable references from the previous release. This plugin
-automatically adds all required references and settings.
-
-1. `build.gradle`: _wearable dependencies_
-
-2. `AndroidManifest.xml`: _`WAKE_LOCK` and `android.hardware.type.watch`_
-   
-3. `MainActivity.kt` or `MainActivity.java`: _all `AmbientMode` references._
-

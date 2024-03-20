@@ -36,8 +36,7 @@ class WatchShape extends StatefulWidget {
   /// Call [WatchShape.of(context)] to retrieve the shape further down
   /// in the widget hierarchy.
   static WearShape of(BuildContext context) {
-    // ignore: deprecated_member_use_from_same_package
-    return InheritedShape.of(context).shape;
+    return _InheritedShape.of(context).shape;
   }
 
   @override
@@ -65,8 +64,7 @@ class _WatchShapeState extends State<WatchShape> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: deprecated_member_use_from_same_package
-    return InheritedShape(
+    return _InheritedShape(
       shape: _shape,
       child: Builder(
         builder: (context) {
@@ -77,24 +75,20 @@ class _WatchShapeState extends State<WatchShape> {
   }
 }
 
-/// An inherited widget that holds the shape of the Watch
-@Deprecated(
-  'Add WatchShape instead and use WatchShape.of(context) to get the shape value.',
-)
-class InheritedShape extends InheritedWidget {
+class _InheritedShape extends InheritedWidget {
   /// Constructor
-  const InheritedShape({
-    super.key,
+  const _InheritedShape({
     required this.shape,
     required super.child,
   });
 
   final WearShape shape;
 
-  static InheritedShape of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<InheritedShape>()!;
+  static _InheritedShape of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<_InheritedShape>()!;
   }
 
   @override
-  bool updateShouldNotify(InheritedShape oldWidget) => shape != oldWidget.shape;
+  bool updateShouldNotify(_InheritedShape oldWidget) =>
+      shape != oldWidget.shape;
 }
