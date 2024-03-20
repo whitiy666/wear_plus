@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wear/src/wear.dart';
+import 'package:wear_plus/src/wear.dart';
 
 /// Ambient modes for a Wear device
 enum WearMode { active, ambient }

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:wear/src/wear.dart';
+import 'package:wear_plus/src/wear.dart';
 
 /// Shape of a Wear device
 enum WearShape { square, round }

@@ -37,7 +37,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.mjohnsullivan.flutterwear.wear_example"
+        applicationId "dev.rexios.wear_plus.wear_plus_example"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
         minSdkVersion 23
@@ -53,7 +53,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-    namespace 'com.mjohnsullivan.flutterwear.wear_example'
+    namespace 'dev.rexios.wear_plus.wear_plus_example'
 }
 
 flutter {

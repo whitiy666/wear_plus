@@ -135,7 +135,7 @@ class AmbientDetails {
 }
 
 /// Callback to receive ambient mode state changes.
-abstract class AmbientCallback {
+mixin AmbientCallback {
   /// Called when an activity is entering ambient mode.
   void onEnterAmbient(AmbientDetails ambientDetails) {}
 

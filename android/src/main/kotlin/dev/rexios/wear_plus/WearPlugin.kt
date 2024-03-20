@@ -1,4 +1,4 @@
-package com.mjohnsullivan.flutterwear.wear
+package dev.rexios.wear_plus
 
 import android.os.Bundle
 import androidx.lifecycle.Lifecycle

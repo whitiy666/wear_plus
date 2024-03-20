@@ -1,1 +1,1 @@
--keep class com.mjohnsullivan.flutterwear.wear.** { *; }
+-keep class dev.rexios.wear_plus.** { *; }

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.mjohnsullivan.flutterwear.wear"
+	package="dev.rexios.wear_plus"
 	>
 
 	<!-- Flags the app as a Wear app -->
