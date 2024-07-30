@@ -1,1 +1,2 @@
 -keep class dev.rexios.wear_plus.** { *; }
+-keep class com.google.android.wearable.compat.** { *; }
