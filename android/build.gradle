@@ -50,10 +50,11 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
-    release {
-        minifyEnabled true
-        shrinkResources true
-        proguardFiles getDefaultProguardFile('proguard-android.txt'), "${project.rootDir}/proguard-rules.pro"
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "${project.rootDir}/proguard-rules.pro"
+        }
     }
 
     namespace "dev.rexios.wear_plus"
